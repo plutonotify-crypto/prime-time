@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Pretty URL for the projector screen: https://your-site.netlify.app/host
+[[redirects]]
+  from = "/host"
+  to = "/host.html"
+  status = 200
+
+# Always serve fresh code: a redeploy right before class must never be cached.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache"

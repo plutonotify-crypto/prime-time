@@ -1,0 +1,17 @@
+{
+  "name": "prime-time-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prime Time: a live multiplayer class game about Amazon's diversification strategy",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
